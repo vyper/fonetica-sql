@@ -1,0 +1,22 @@
+h1. Fonetica-SQL
+
+Fonetica-SQL implements the "BuscaBR algorithm":http://www.unibratec.com.br/jornadacientifica/diretorio/NOVOB.pdf to match misspelled or ambiguous names at Brazil. This project is fork to "http://github.com/sobrinho/fonetica":http://github.com/sobrinho/fonetica.
+
+h2. Usage
+
+<pre>
+mysql> \. /path/to/mysql-function-foneticalize.sql
+
+mysql> select foneticalize('wagner batista'), foneticalize('vagner baptista');
++--------------------------------+---------------------------------+
+| foneticalize('wagner batista') | foneticalize('vagner baptista') |
++--------------------------------+---------------------------------+
+| VM BT                          | VM BT                           |
++--------------------------------+---------------------------------+
+</pre>
+
+h2. Project info
+
+Fonetica-SQL is hosted on Github: "http://github.com/vyper/fonetica-sql":http://github.com/vyper/fonetica-sql, where your contributions, forkings, comments and feedback are greatly welcomed.
+
+
