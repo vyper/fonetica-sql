@@ -10,7 +10,7 @@ CREATE FUNCTION foneticalize(word VARCHAR(255) charset utf8)
     DECLARE foneticalized varchar(255) default '';
     DECLARE letter        char(1)      default '';
     DECLARE specials      varchar(76) default 'ÁÀÃÂÉÈÊÍÌÎÓÒÔÕÚÙÛÜÇáàãâéèêíìîóòôõúùûüç';
-    DECLARE non_specials  varchar(38) default 'AAAAEEEIIIOOOOUUUUCAAAAEEEIIIOOOOUUUUC';
+    DECLARE non_specials  varchar(38) default 'AAAAEEEIIIOOOOUUUUSAAAAEEEIIIOOOOUUUUS';
     
     -- removing especial chars
     set i = 1;
