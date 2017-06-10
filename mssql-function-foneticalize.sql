@@ -1,5 +1,5 @@
 --DROP function dbo.foneticalize
-ALTER function dbo.foneticalize(@word varchar(255))
+CREATE function dbo.foneticalize(@word varchar(255))
     returns varchar(255) as
 BEGIN
 -- ORIGINAL: https://github.com/vyper/fonetica-sql/blob/master/mssql-function-foneticalize.sql
