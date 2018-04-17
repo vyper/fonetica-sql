@@ -18,14 +18,14 @@ CREATE OR REPLACE FUNCTION foneticalize(word VARCHAR(255))
     word := replace(word, 'PH', 'F');
     word := regexp_replace(word, e'GL|GR|MG|NG|RG', 'G', 'g');
     word := replace(word, 'Y', 'I');
-    word := regexp_replace(word, e'GE|GI|RJ|MJ', 'J', 'g');
+    word := regexp_replace(word, e'GE|GI|RJ|MJ|JH', 'J', 'g');
     word := regexp_replace(word, e'CA|CO|CU|CK|Q', 'K', 'g');
     word := replace(word, 'N', 'M');
     word := regexp_replace(word, e'AO|AUM|GM|MD|OM|ON', 'M', 'g');
     word := replace(word, 'PR', 'P');
     word := replace(word, 'L', 'R');
     word := regexp_replace(word, e'CE|CI|CH|CS|RS|TS|X|Z', 'S', 'g');
-    word := regexp_replace(word, e'TR|TL', 'T', 'g');
+    word := regexp_replace(word, e'TR|TL|TH', 'T', 'g');
     word := regexp_replace(word, e'CT|RT|ST|PT', 'T', 'g');
     word := regexp_replace(word, e'\\y[UW]', 'V', 'g');
     word := replace(word, 'RM', 'SM');
